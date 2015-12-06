@@ -21,6 +21,8 @@ public class InfectionService extends Service {
      *      infectiousness in transmission method * %infection in original body
      *      Makes a growth check vs the receiving body
      *      Each virus in a transmission event gets a shot at infection
+     *   New virus:
+     *      Virus is set to 100% infected on current host, everything else deleted
      *   Tick:
      *      Once every 15 minutes
      *      Each virus gets a growth check
