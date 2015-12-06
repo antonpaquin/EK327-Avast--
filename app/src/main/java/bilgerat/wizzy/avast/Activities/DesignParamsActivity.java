@@ -13,11 +13,11 @@ public class DesignParamsActivity extends AppCompatActivity {
      * +- stat bars
      * Skill powers 0-10
      * Stats:
-     *  Aggression (rename reproduction?) (1p -> 7.5%)
-     *  Strength (1p -> 1p)
-     *  Heat resistance (1p -> 10%)
-     *  Infection (contact) (bluetooth) (1p -> 2%)
-     *  Infection (air) (gps) (1p -> .1%)
+     *  Aggression (rename reproduction?) (10% + 5%/1p)
+     *  Strength (1 + 1/1p)
+     *  Heat resistance (0 + 10%/1p)
+     *  Infection (contact) (bluetooth) (5% + 2%/1p)
+     *  Infection (air) (gps) ( 0.5% + 0.15%/1p)
      *
      * 25p allocated
      *

@@ -1,4 +1,4 @@
-package bilgerat.wizzy.avast.Activities;
+package bilgerat.wizzy.avast.Services;
 
 import android.app.Service;
 import android.content.Intent;

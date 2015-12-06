@@ -7,23 +7,27 @@ import android.view.MenuItem;
 
 import bilgerat.wizzy.avast.R;
 
-public class SelfViewActivity extends AppCompatActivity {
+public class StatisticsActivity extends AppCompatActivity {
+
     /*
-     * Shows what viruses have infected you.
-     * Contains a RecyclerView with virus stats, and a picture showing % infections
-     * Data (picture, %list) should be got from server
+     * Fetches and presents data:
+     *   Picture of virus
+     *   Number of infected
+     *   Graph of infected vs time
+     *   Average infection per host
+     *
      */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_self_view);
+        setContentView(R.layout.activity_statistics);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_self_view, menu);
+        getMenuInflater().inflate(R.menu.menu_statistics, menu);
         return true;
     }
 

@@ -29,15 +29,24 @@
         </activity>
 
         <service
-            android:name=".Activities.ConnnectionService"
+            android:name=".Services.ConnnectionService"
             android:enabled="true"
             android:exported="true" >
         </service>
         <service
-            android:name=".Activities.InfectionService"
+            android:name=".Services.InfectionService"
             android:enabled="true"
             android:exported="true" >
         </service>
+
+        <activity
+            android:name=".Activities.HomeActivity"
+            android:label="@string/title_activity_home" >
+        </activity>
+        <activity
+            android:name=".Activities.StatisticsActivity"
+            android:label="@string/title_activity_statistics" >
+        </activity>
     </application>
 
 </manifest>

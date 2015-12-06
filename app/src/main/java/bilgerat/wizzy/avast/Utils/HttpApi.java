@@ -5,4 +5,7 @@ package bilgerat.wizzy.avast.Utils;
  *
  */
 public class HttpApi {
+    /*
+     * All server calls should be located here
+     */
 }

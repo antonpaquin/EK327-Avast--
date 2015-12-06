@@ -5,4 +5,7 @@ package bilgerat.wizzy.avast.Utils;
  *
  */
 public class InfectionModel {
+    /*
+     * Set of functions that deals with adding new information to and getting information from InfectionService
+     */
 }

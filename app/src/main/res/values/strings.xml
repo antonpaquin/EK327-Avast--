@@ -8,4 +8,7 @@
     <string name="title_activity_design_params">DesignParamsActivity</string>
     <string name="title_activity_map">MapActivity</string>
     <string name="title_activity_self_view">SelfViewActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_virus_view">VirusViewActivity</string>
+    <string name="title_activity_statistics">StatisticsActivity</string>
 </resources>
