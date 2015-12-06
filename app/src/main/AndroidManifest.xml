@@ -47,6 +47,10 @@
             android:name=".Activities.StatisticsActivity"
             android:label="@string/title_activity_statistics" >
         </activity>
+        <activity
+            android:name=".Activities.HowToActivity"
+            android:label="@string/title_activity_how_to" >
+        </activity>
     </application>
 
 </manifest>

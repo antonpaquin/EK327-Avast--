@@ -12,6 +12,7 @@ public class HomeActivity extends AppCompatActivity {
     /*
      * Main screen -- Draws a bunch of buttons to move to different activities
      * Links:
+     *   How to (HowToActivity)
      *   My Virus (StatisticsActivity)
      *   My Host (SelfViewActivity)
      *   Global Spread (MapActivity)
