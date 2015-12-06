@@ -13,6 +13,9 @@ public class MapActivity extends AppCompatActivity {
      * Gets an image from the server and draws it to an ImageView
      * Image should be a map of US with dots at each location where someone you have infected is located
      * Not much to do here
+     *
+     * NOTE: for image loading, let's use the UIL library
+     * Yell at Anton if you're here and it isn't installed yet / isn't clear how to use it
      */
 
     @Override
