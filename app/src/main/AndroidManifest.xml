@@ -29,7 +29,12 @@
         </activity>
 
         <service
-            android:name=".Activities.BackgroundService"
+            android:name=".Activities.ConnnectionService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".Activities.InfectionService"
             android:enabled="true"
             android:exported="true" >
         </service>

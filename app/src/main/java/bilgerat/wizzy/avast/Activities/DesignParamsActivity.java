@@ -8,7 +8,21 @@ import android.view.MenuItem;
 import bilgerat.wizzy.avast.R;
 
 public class DesignParamsActivity extends AppCompatActivity {
-
+    /*
+     * Customize virus stats
+     * +- stat bars
+     * Skill powers 0-10
+     * Stats:
+     *  Aggression (rename reproduction?) (1p -> 7.5%)
+     *  Strength (1p -> 1p)
+     *  Heat resistance (1p -> 10%)
+     *  Infection (contact) (bluetooth) (1p -> 2%)
+     *  Infection (air) (gps) (1p -> .1%)
+     *
+     * 25p allocated
+     *
+     * Allow input to name virus
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -8,6 +8,11 @@ import android.view.MenuItem;
 import bilgerat.wizzy.avast.R;
 
 public class SelfViewActivity extends AppCompatActivity {
+    /*
+     * Shows what viruses have infected you.
+     * Contains a RecyclerView with virus stats, and a picture showing % infections
+     *
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
