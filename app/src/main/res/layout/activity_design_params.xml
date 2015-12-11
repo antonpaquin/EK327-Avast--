@@ -20,5 +20,536 @@
         Text edit box for virus name
         Done button
     -->
+    <EditText
+        android:id="@+id/design_params_virus_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_button_height"
+        android:inputType="text"
+        android:gravity="center"
+        android:text="@string/params_virus_name" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textColor="#000"
+        android:text="@string/params_aggression"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/params_aggression_plus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/params_minus"/>
+        <Button
+            android:id="@+id/params_aggression_minus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/params_plus"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textColor="#000"
+        android:text="@string/params_bluetooth_infectivity"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/params_bluetooth_infectivity_minus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/params_minus"/>
+            <Button
+                android:id="@+id/params_bluetooth_infectivity_plus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/params_plus"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textColor="#000"
+        android:text="@string/params_gps_infectivity"/>
+
+    <!-- Contact infectivity slider-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/params_gps_infectivity_minus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/params_minus"/>
+        <Button
+            android:id="@+id/params_gps_infectivity_plus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/params_plus"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textColor="#000"
+        android:text="@string/params_robustness"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/params_robustness_minus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/params_minus"/>
+        <Button
+            android:id="@+id/params_robustness_plus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/params_plus"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textColor="#000"
+        android:text="@string/params_strength"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/params_strength_minus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/params_minus"/>
+        <Button
+            android:id="@+id/params_strength_plus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/params_plus"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="#bbb">
+            </View>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+        <!-- Could stick an image here or something-->
+    </View>
+
+    <Button
+        android:layout_width="@dimen/home_button_width"
+        android:layout_height="@dimen/home_button_height"
+        android:text="@string/home" />
+
+
 
 </LinearLayout>

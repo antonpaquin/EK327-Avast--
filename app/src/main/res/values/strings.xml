@@ -13,4 +13,51 @@
     <string name="title_activity_statistics">StatisticsActivity</string>
     <string name="title_activity_how_to">HowToActivity</string>
     <string name="title_activity_main">MainActivity</string>
+    <!--
+        Strings for across activities, used for navigation
+        Anything accessible from home gets a button
+    -->
+    <string name="home">Home</string>
+    <string name="map">Infection Map</string>
+    <string name="how_to">Help</string>
+    <string name="params">My Virus</string>
+    <string name="host">My Host</string>
+    <string name="design">Design New Virus</string>
+    <string name="settings">Settings</string>
+    <string name="qqq">Quit</string>
+
+    <!--
+        Strings for the param view
+    -->
+    <string name="params_virus_name">My Virus</string>
+    <string name="params_plus">+</string>
+    <string name="params_minus">-</string>
+    <string name="params_aggression">Aggression</string>
+    <string name="params_strength">Strength</string>  
+    <string name="params_robustness">Climate Resistance</string>
+    <string name="params_bluetooth_infectivity">Contact Infectivity</string>
+    <string name="params_gps_infectivity">Airborn Infectivity</string>
+
+    <!--
+        Strings for the design view
+    -->
+
+    <string name="design_red_label">Red</string>
+    <string name="design_blue_label">Blue</string>
+    <string name="design_green_label">Green</string>
+    <string name="design_toggle_sliders_button">Toggle Sliders</string>
+    <string name="design_add_geometry_button">Add shapes</string>
+
+    <!--
+        Strings for the map view
+    -->
+
+    <string name="map_title">Infection Map</string>
+    <string name="map_my__button">My Virus</string>
+    <string name="map_all_button">All Viruses</string>
+
+
+
+
+
 </resources>
