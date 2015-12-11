@@ -1,11 +1,15 @@
 package bilgerat.wizzy.avast.Activities;
 
+import android.bluetooth.BluetoothAdapter;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import bilgerat.wizzy.avast.R;
+import bilgerat.wizzy.avast.Services.ConnectionService;
+
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -25,6 +29,10 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        Intent intent = new Intent(this, ConnectionService.class);
+        startService(intent);
+        ConnectionService.startBluetooth(this);
     }
+
 
 }
