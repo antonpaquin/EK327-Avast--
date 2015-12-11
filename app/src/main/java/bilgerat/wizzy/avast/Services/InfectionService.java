@@ -4,6 +4,8 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 
+import bilgerat.wizzy.avast.Utils.InfectionModel;
+
 public class InfectionService extends Service {
     /*
      * Manges change in infection stats over time
@@ -28,6 +30,9 @@ public class InfectionService extends Service {
      *      Each virus gets a growth check
      *      Remove low% viruses
      */
+
+    public static InfectionModel model;
+
     public InfectionService() {
     }
 
@@ -35,5 +40,13 @@ public class InfectionService extends Service {
     public IBinder onBind(Intent intent) {
         // TODO: Return the communication channel to the service.
         throw new UnsupportedOperationException("Not yet implemented");
+    }
+
+    public static int[] getTransmission() {
+        return null;//TODO
+    }
+
+    public static void transmissionEvent(int virusID) {
+
     }
 }
