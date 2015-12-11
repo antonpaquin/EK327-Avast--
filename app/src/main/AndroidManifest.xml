@@ -10,10 +10,13 @@
         <activity
             android:name=".Activities.StartupActivity"
             android:label="@string/title_activity_startup" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
-            android:name=".Activities.DesignAppearanceActivity"
-            android:label="@string/title_activity_design_appearance" >
+            android:name=".Activities.DesignAppearanceActivity">
         </activity>
         <activity
             android:name=".Activities.DesignParamsActivity"

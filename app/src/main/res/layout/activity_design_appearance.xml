@@ -1,5 +1,8 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:virus="http://schema.android.com/apk/res/bilgerat.wizzy.avast"
+    android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -20,5 +23,40 @@
             Most likely a bunch of ImageViews
         "Done" button
     -->
+
+
+    <!--
+    This is a test of the custom VirusView attribute
+    -->
+
+    <bilgerat.wizzy.avast.Support.VirusView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        virus:bodyColor="#000"
+        virus:color1="#00F"
+        virus:color2="#0F0"
+        virus:color3="#F00"
+        virus:color4="#0FF"
+        virus:color5="#FF0"
+        virus:color6="#FFF"
+        virus:color7="#000"
+        virus:color8="#00F"
+        virus:color9="#0F0"
+        virus:color10="#F00"
+        virus:color11="#0FF"
+        virus:color12="#FF0"
+        virus:shape1="circle"
+        virus:shape2="square"
+        virus:shape3="triangle"
+        virus:shape4="fork"
+        virus:shape5="gone"
+        virus:shape6="gone"
+        virus:shape7="circle"
+        virus:shape8="square"
+        virus:shape9="triangle"
+        virus:shape10="fork"
+        virus:shape11="gone"
+        virus:shape12="gone"
+        />
 
 </RelativeLayout>

@@ -12,4 +12,5 @@
     <string name="title_activity_virus_view">VirusViewActivity</string>
     <string name="title_activity_statistics">StatisticsActivity</string>
     <string name="title_activity_how_to">HowToActivity</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="VirusView">
+        <attr name="bodyColor" format="color"/>
+        <attr name="color1" format="color"/>
+        <attr name="color2" format="color"/>
+        <attr name="color3" format="color"/>
+        <attr name="color4" format="color"/>
+        <attr name="color5" format="color"/>
+        <attr name="color6" format="color"/>
+        <attr name="color7" format="color"/>
+        <attr name="color8" format="color"/>
+        <attr name="color9" format="color"/>
+        <attr name="color10" format="color"/>
+        <attr name="color11" format="color"/>
+        <attr name="color12" format="color"/>
+        <attr name="shape1" format="enum">
+            <enum name="circle" value="0"/>
+            <enum name="square" value="1"/>
+            <enum name="triangle" value="2"/>
+            <enum name="fork" value="3"/>
+            <enum name="gone" value="4"/>
+        </attr>
+        <attr name="shape2" format="enum">
+            <enum name="circle" value="0"/>
+            <enum name="square" value="1"/>
+            <enum name="triangle" value="2"/>
+            <enum name="fork" value="3"/>
+            <enum name="gone" value="4"/>
+        </attr>
+        <attr name="shape3" format="enum">
+            <enum name="circle" value="0"/>
+            <enum name="square" value="1"/>
+            <enum name="triangle" value="2"/>
+            <enum name="fork" value="3"/>
+            <enum name="gone" value="4"/>
+        </attr>
+        <attr name="shape4" format="enum">
+            <enum name="circle" value="0"/>
+            <enum name="square" value="1"/>
+            <enum name="triangle" value="2"/>
+            <enum name="fork" value="3"/>
+            <enum name="gone" value="4"/>
+        </attr>
+        <attr name="shape5" format="enum">
+            <enum name="circle" value="0"/>
+            <enum name="square" value="1"/>
+            <enum name="triangle" value="2"/>
+            <enum name="fork" value="3"/>
+            <enum name="gone" value="4"/>
+        </attr>
+        <attr name="shape6" format="enum">
+            <enum name="circle" value="0"/>
+            <enum name="square" value="1"/>
+            <enum name="triangle" value="2"/>
+            <enum name="fork" value="3"/>
+            <enum name="gone" value="4"/>
+        </attr>
+        <attr name="shape7" format="enum">
+            <enum name="circle" value="0"/>
+            <enum name="square" value="1"/>
+            <enum name="triangle" value="2"/>
+            <enum name="fork" value="3"/>
+            <enum name="gone" value="4"/>
+        </attr>
+        <attr name="shape8" format="enum">
+            <enum name="circle" value="0"/>
+            <enum name="square" value="1"/>
+            <enum name="triangle" value="2"/>
+            <enum name="fork" value="3"/>
+            <enum name="gone" value="4"/>
+        </attr>
+        <attr name="shape9" format="enum">
+            <enum name="circle" value="0"/>
+            <enum name="square" value="1"/>
+            <enum name="triangle" value="2"/>
+            <enum name="fork" value="3"/>
+            <enum name="gone" value="4"/>
+        </attr>
+        <attr name="shape10" format="enum">
+            <enum name="circle" value="0"/>
+            <enum name="square" value="1"/>
+            <enum name="triangle" value="2"/>
+            <enum name="fork" value="3"/>
+            <enum name="gone" value="4"/>
+        </attr>
+        <attr name="shape11" format="enum">
+            <enum name="circle" value="0"/>
+            <enum name="square" value="1"/>
+            <enum name="triangle" value="2"/>
+            <enum name="fork" value="3"/>
+            <enum name="gone" value="4"/>
+        </attr>
+        <attr name="shape12" format="enum">
+            <enum name="circle" value="0"/>
+            <enum name="square" value="1"/>
+            <enum name="triangle" value="2"/>
+            <enum name="fork" value="3"/>
+            <enum name="gone" value="4"/>
+        </attr>
+        <attr name="labelPosition" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>

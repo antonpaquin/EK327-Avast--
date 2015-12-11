@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
 
 import bilgerat.wizzy.avast.R;
 
@@ -16,9 +17,7 @@ public class DesignAppearanceActivity extends AppCompatActivity {
      *      Triangle
      *      Square
      *      Circle
-     *      Rhombus
      *      'y' shape
-     *      Squiggles
      *      blank
      *   Colors:
      *      RGB sliders
