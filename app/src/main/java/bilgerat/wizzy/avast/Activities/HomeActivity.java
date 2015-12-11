@@ -22,6 +22,7 @@ public class HomeActivity extends AppCompatActivity {
      *   Global Spread (MapActivity)
      *   Design New Virus (DesignParamsActivity)
      *   Exit
+     *   Settings
      * Plus maybe some cool bio-themed art in the BG
      */
 

@@ -30,6 +30,7 @@
     -->
 
     <bilgerat.wizzy.avast.Support.VirusView
+        android:id="@+id/design_virus_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         virus:bodyColor="#000"
@@ -58,5 +59,87 @@
         virus:shape11="gone"
         virus:shape12="gone"
         />
+
+
+    <!-- Contains empty weighted view to take up first 3/4 of page,
+    followed by rgb sliders at the bottom -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9">
+
+        </View>
+
+        <Button
+            android:id="@+id/design_slider_button"
+            android:layout_width="@dimen/home_button_width"
+            android:layout_height="@dimen/home_button_height"
+            android:text="@string/design_toggle_sliders_button"/>
+
+        <Button
+            android:id="@+id/design_geometry_button"
+            android:layout_width="@dimen/home_button_width"
+            android:layout_height="@dimen/home_button_height"
+            android:text="@string/design_add_geometry_button"/>
+
+        <LinearLayout
+            android:id="@+id/design_color_slider_menu"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:textColor="#000"
+                android:text="@string/design_red_label"/>
+
+            <SeekBar
+                android:id="@+id/design_red_slider"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:textColor="#000"
+                android:text="@string/design_green_label"/>
+
+            <SeekBar
+                android:id="@+id/design_green_slider"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:textColor="#000"
+                android:text="@string/design_blue_label"/>
+
+            <SeekBar
+                android:id="@+id/design_blue_slider"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
 
 </RelativeLayout>

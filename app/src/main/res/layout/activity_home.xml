@@ -10,6 +10,56 @@
     <!--
     LinearLayout (vertical) with:
         Button for each link
+
+    <string name="map">Infection Map</string>
+    <string name="how_to">Help</string>
+    <string name="params">My Virus</string>
+    <string name="host">My Host</string>
+    <string name="design">Design New Virus</string>
+    <string name="settings">Settings</string>
+    <string name="qqq">Quit</string>
     -->
 
+    <Button
+        android:id="@+id/home_map_button"
+        android:layout_width="@dimen/home_button_width"
+        android:layout_height="@dimen/home_button_height"
+        android:text="@string/map"/>
+
+    <Button
+        android:id="@+id/home_how_to_button"
+        android:layout_width="@dimen/home_button_width"
+        android:layout_height="@dimen/home_button_height"
+        android:text="@string/how_to"/>
+    <Button
+        android:id="@+id/home_design_params_button"
+        android:layout_width="@dimen/home_button_width"
+        android:layout_height="@dimen/home_button_height"
+        android:text="@string/params"/>
+
+    <Button
+        android:id="@+id/home_self_view_button"
+        android:layout_width="@dimen/home_button_width"
+        android:layout_height="@dimen/home_button_height"
+        android:text="@string/host"/>
+
+    <Button
+        android:id="@+id/home_design_appearance_button"
+        android:layout_width="@dimen/home_button_width"
+        android:layout_height="@dimen/home_button_height"
+        android:text="@string/design"/>
+
+    <Button
+        android:id="@+id/home_settings_button"
+        android:layout_width="@dimen/home_button_width"
+        android:layout_height="@dimen/home_button_height"
+        android:text="@string/settings"/>
+
+    <Button
+        android:id="@+id/home_quit_button"
+        android:layout_width="@dimen/home_button_width"
+        android:layout_height="@dimen/home_button_height"
+        android:text="@string/qqq"/>
 </LinearLayout>
+
+
