@@ -12,6 +12,7 @@ import android.widget.Button;
 
 import bilgerat.wizzy.avast.R;
 import bilgerat.wizzy.avast.Services.ConnectionService;
+import bilgerat.wizzy.avast.Services.InfectionService;
 
 
 public class HomeActivity extends AppCompatActivity {
@@ -33,9 +34,11 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        Intent intent = new Intent(this, ConnectionService.class);
-        startService(intent);
+        Intent connectIntent = new Intent(this, ConnectionService.class);
+        startService(connectIntent);
         ConnectionService.startBluetooth(this);
+        Intent infectIntent = new Intent(this, InfectionService.class);
+        startService(infectIntent);
         bindButtons();
     }
 
@@ -83,7 +86,7 @@ public class HomeActivity extends AppCompatActivity {
         quitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                homeActivity.finish();
+                finish();
                 System.exit(0);
             }
         });

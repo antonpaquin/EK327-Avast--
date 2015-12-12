@@ -30,9 +30,9 @@
             android:text="My Statistics"/>
 
         <ImageView
-            android:layout_width="0db"
+            android:layout_width="0dp"
             android:layout_weight="5"
-            android:layout_height="0db" />
+            android:layout_height="0dp" />
 
 
 
@@ -45,7 +45,7 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="0db"
+            android:layout_height="0dp"
             android:layout_weight="5"/>
 
         <LinearLayout

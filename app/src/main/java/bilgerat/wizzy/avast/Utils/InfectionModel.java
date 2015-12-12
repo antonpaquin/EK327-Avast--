@@ -6,6 +6,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
@@ -22,9 +23,9 @@ public class InfectionModel {
     /*
      * Set of functions that deals with adding new information to and getting information from InfectionService
      */
-    public ArrayList<Virus> viruses;
-    public Map<Virus,Double> infection;
-    public Virus health;
+    public ArrayList<Virus> viruses = new ArrayList<>();
+    public Map<Virus,Double> infection = new HashMap<>();
+    public Virus health = new Virus();
     public static Map<Integer, Double> resistance;
 
     private final double resistance_growth = 12.0/(14*24*4);
@@ -105,6 +106,11 @@ public class InfectionModel {
         public double heatResist;
         public double infectivity_near;
         public double infectivity_far;
+
+        public Virus() {
+            colors = new int[13];
+            shapes = new int[12];
+        }
     }
 
     public static Virus parseJSONVirus(String json) {

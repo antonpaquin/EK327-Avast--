@@ -56,6 +56,7 @@ public class InfectionService extends Service {
             }
         };
         handler.post(doTicks);
+        model = new InfectionModel();
     }
 
     public void tick() {
