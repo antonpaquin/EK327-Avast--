@@ -6,10 +6,15 @@ import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
+
+import java.nio.ByteBuffer;
 
 import bilgerat.wizzy.avast.R;
 
@@ -33,6 +38,7 @@ public class VirusView extends View{
     private Bitmap cell;
     private Matrix cellScale;
     private float overlaySize;
+    private int red = 0, blue=0, green=0;
 
     public VirusView(Context context) {
         super(context);
@@ -81,8 +87,24 @@ public class VirusView extends View{
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         canvas.drawBitmap(cell, cellScale, drawPaint);
-        overlayPaint.setColor(colors[0]);
+        overlayPaint.setColor((128 << 24) + (red << 16) + (green << 8) + blue);
         canvas.drawCircle(overlaySize, overlaySize, overlaySize, overlayPaint);
+    }
+
+    public void changeRed(int progress) {
+        red = progress;
+        invalidate();
+        requestLayout();
+    }
+    public void changeGreen(int progress) {
+        green = progress;
+        invalidate();
+        requestLayout();
+    }
+    public void changeBlue(int progress) {
+        blue = progress;
+        invalidate();
+        requestLayout();
     }
 
     public int getShape(int shapenum) {
