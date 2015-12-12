@@ -1,6 +1,7 @@
 package bilgerat.wizzy.avast.Activities;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -19,8 +20,15 @@ public class StartupActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_startup);
-        Intent intent = new Intent(this, HomeActivity.class);
-        startActivity(intent);
+        Handler handler = new Handler();
+        final Intent intent = new Intent(this, HomeActivity.class);
+        Runnable launchHome = new Runnable() {
+            @Override
+            public void run() {
+                startActivity(intent);
+            }
+        };
+        handler.postDelayed(launchHome, 1000);
     }
 
 
