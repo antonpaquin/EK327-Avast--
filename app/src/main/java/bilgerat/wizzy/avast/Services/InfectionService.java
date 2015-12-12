@@ -8,6 +8,8 @@ import android.util.Log;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 import bilgerat.wizzy.avast.Utils.HttpApi;
@@ -40,6 +42,8 @@ public class InfectionService extends Service {
 
     public static InfectionModel model;
     private static final int tickInterval = 15;
+
+    private static int newr, newg, newb;
 
     public InfectionService() {
         final Handler handler = new Handler();
@@ -81,11 +85,6 @@ public class InfectionService extends Service {
 
     }
 
-    @Override
-    public IBinder onBind(Intent intent) {
-        return null;
-    }
-
     public static int[] getTransmission() {
         ArrayList<Integer> li = new ArrayList<>();
         Random r = new Random();
@@ -115,5 +114,49 @@ public class InfectionService extends Service {
                 Log.d("Avast: ", response);
             }
         });
+    }
+
+    public static void startNewBuild(int r, int g, int b) {
+        newr = r;
+        newg = g;
+        newb = b;
+    }
+
+    public static void doNewBuild(String name, int aggression, int strength, int climate, int infect_near, int infect_far) {
+        final InfectionModel.Virus v = new InfectionModel.Virus();
+        v.colors[0] = (newr << 16) + (newg << 8) + newb;
+        v.name = name;
+        v.aggression = 0.1 + (0.05 * aggression);
+        v.strength = 1 + strength;
+        v.heatResist = 0.1*climate;
+        v.infectivity_near = (0.1 + 0.04*infect_near);
+        v.infectivity_far = (0.005 + 0.0015*infect_far);
+        v.originalLatitude = ConnectionService.getLatitude();
+        Map<String, String> params = new HashMap<>();
+        params.put("color", Integer.toString(v.colors[0]));
+        params.put("name", v.name);
+        params.put("aggression", Double.toString(v.aggression));
+        params.put("strength", Double.toString(v.strength));
+        params.put("heatResist", Double.toString(v.heatResist));
+        params.put("infectivity_near", Double.toString(v.infectivity_near));
+        params.put("infectivity_far", Double.toString(v.infectivity_far));
+        params.put("originalLatitude", Double.toString(v.originalLatitude));
+        HttpApi.createVirus(Integer.toString(model.hostId), params, new HttpApi.ResponseHandler() {
+            @Override
+            public void onSuccess(String response) {
+                v.ID = Integer.parseInt(response);
+                model.new_virus(v);
+            }
+
+            @Override
+            public void onFail(String response) {
+                Log.e("Avast", response);
+            }
+        });
+    }
+
+    @Override
+    public IBinder onBind(Intent intent) {
+        return null;
     }
 }

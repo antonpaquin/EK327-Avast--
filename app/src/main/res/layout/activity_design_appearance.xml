@@ -80,19 +80,22 @@
             android:id="@+id/design_slider_button"
             android:layout_width="@dimen/home_button_width"
             android:layout_height="@dimen/home_button_height"
-            android:text="@string/design_toggle_sliders_button"/>
+            android:text="@string/design_toggle_sliders_button"
+            android:layout_gravity="center_horizontal"/>
 
         <Button
             android:id="@+id/design_geometry_button"
             android:layout_width="@dimen/home_button_width"
             android:layout_height="@dimen/home_button_height"
-            android:text="@string/design_add_geometry_button"/>
+            android:text="@string/design_add_geometry_button"
+            android:visibility="gone"/>
 
         <Button
             android:id="@+id/design_params_button"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:text="Virus Stats"
+            android:layout_gravity="center_horizontal"
             />
 
         <LinearLayout

@@ -80,19 +80,19 @@ public class SelfViewActivity extends AppCompatActivity {
             virus.changeGreen((v.colors[0] >> 8) % 256);
             virus.changeBlue((v.colors[0]) % 256);
             for (int i=1; i<=v.aggression; i++) {
-                aggression.getChildAt(i).setBackgroundColor(0x00FF00);
+                aggression.getChildAt(i).setBackgroundColor(0xFF00FF00);
             }
             for (int i=1; i<=v.strength; i++) {
-                strength.getChildAt(i).setBackgroundColor(0x00FF00);
+                strength.getChildAt(i).setBackgroundColor(0xFF00FF00);
             }
             for (int i=1; i<=v.heatResist; i++) {
-                climate.getChildAt(i).setBackgroundColor(0x00FF00);
+                climate.getChildAt(i).setBackgroundColor(0xFF00FF00);
             }
             for (int i=1; i<=v.infectivity_near; i++) {
-                contact.getChildAt(i).setBackgroundColor(0x00FF00);
+                contact.getChildAt(i).setBackgroundColor(0xFF00FF00);
             }
             for (int i=1; i<=v.infectivity_far; i++) {
-                airborn.getChildAt(i).setBackgroundColor(0x00FF00);
+                airborn.getChildAt(i).setBackgroundColor(0xFF00FF00);
             }
         }
     }

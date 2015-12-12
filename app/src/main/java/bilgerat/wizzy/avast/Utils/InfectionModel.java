@@ -27,6 +27,7 @@ public class InfectionModel {
     public Map<Virus,Double> infection = new HashMap<>();
     public Virus health = new Virus();
     public static Map<Integer, Double> resistance;
+    public static int hostId;
 
     private final double resistance_growth = 12.0/(14*24*4);
 
@@ -42,6 +43,7 @@ public class InfectionModel {
         health.heatResist = 1;
         health.infectivity_far = 0;
         health.infectivity_near = 0;
+        infection.put(health, 0.);
     }
 
     public void purge_low_viruses() {
@@ -121,5 +123,13 @@ public class InfectionModel {
         }catch (JSONException e) {
             return new Virus();
         }
+    }
+
+    public void new_virus(Virus v) {
+        viruses = new ArrayList<>();
+        viruses.add(v);
+        infection = new HashMap<>();
+        infection.put(health, 0.);
+        infection.put(v, 1.);
     }
 }
