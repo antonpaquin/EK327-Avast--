@@ -12,6 +12,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -25,44 +26,64 @@ public class HttpApi {
     //For all intents and purposes the end of the function is httpGet(...);
 
     public static void getVirus(String virusId, ResponseHandler handler) {
+        Map<String, String> params = new HashMap<>();
+        params.put("virusId", virusId);
+        httpGet("http://bu.thewillchen.com/getVirus.php", params, handler);
         //Gets virus stats. Full list can be found in the Virus subclass in InfectionModel
         //JSON
     }
 
     public static void getVirusHistoryGraph(String virusId, ResponseHandler handler) {
+        Map<String, String> params = new HashMap<>();
+        params.put("virusId", virusId);
+        httpGet("http://bu.thewillchen.com/getVirusHistoryGraph.php", params, handler);
         //gets the URL of an image that is the history graph of virus infections over time
         //String
     }
 
     public static void getHostInfected(String hostId, ResponseHandler handler) {
+        Map<String, String> params = new HashMap<>();
+        params.put("hostId", hostId);
+        httpGet("http://bu.thewillchen.com/getHostInfected.php", params, handler);
         //Returns what has infected the host at hostId
         //JSON
     }
 
     public static void getVirusInfected(String virusId, ResponseHandler handler) {
+        Map<String, String> params = new HashMap<>();
+        params.put("virusId", virusId);
+        httpGet("http://bu.thewillchen.com/getHostInfected.php", params, handler);
         //Gets stats of what the virus has infected -- number, mean % per person
         //JSON
     }
 
     public static void getVirusMap(String virusId, ResponseHandler handler) {
+        Map<String, String> params = new HashMap<>();
+        params.put("virusId", virusId);
+        httpGet("http://bu.thewillchen.com/getHostInfected.php", params, handler);
         //Gets the URL of an image which is a map of everyone that has some infection with the virus
         //String
     }
 
     public static void createVirus(String hostId, Map<String,String> params, ResponseHandler handler) {
+        params.put("hostId", hostId);
+        httpGet("http://bu.thewillchen.com/getHostInfected.php", params, handler);
         //Returns a virus ID
         //String
         //Also creates the virus in the DB with the given params -- virus design
-        handler.onSuccess("12");
     }
 
     public static void getLocalVirus(String hostId, Map<String,String> params, ResponseHandler handler) {
+        params.put("hostId", hostId);
+        httpGet("http://bu.thewillchen.com/getHostInfected.php", params, handler);
         //Returns a small random sample (10? 100?) of viruses in the local area as defined by GPS (params)
         //Should be unique responses, but not returning enough is OK
         //JSON
     }
 
     public static void tellInfected(String hostId, Map<String,String> params, ResponseHandler handler) {
+        params.put("hostId", hostId);
+        httpGet("http://bu.thewillchen.com/getHostInfected.php", params, handler);
         //Tells the server what has infected the host and how much
         //Response should just be a basic Okay
         //String or JSON
