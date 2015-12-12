@@ -1,7 +1,12 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ebola1">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -26,13 +31,14 @@
         android:layout_height="@dimen/home_button_height"
         android:inputType="text"
         android:gravity="center"
+        android:textColor="#FFF"
         android:text="@string/params_virus_name" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:gravity="center"
-        android:textColor="#000"
+        android:textColor="#FFF"
         android:text="@string/params_aggression"/>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -134,7 +140,7 @@
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:gravity="center"
-        android:textColor="#000"
+        android:textColor="#FFF"
         android:text="@string/params_bluetooth_infectivity"/>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -236,7 +242,7 @@
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:gravity="center"
-        android:textColor="#000"
+        android:textColor="#FFF"
         android:text="@string/params_gps_infectivity"/>
 
     <!-- Contact infectivity slider-->
@@ -339,7 +345,7 @@
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:gravity="center"
-        android:textColor="#000"
+        android:textColor="#FFF"
         android:text="@string/params_robustness"/>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -441,7 +447,7 @@
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:gravity="center"
-        android:textColor="#000"
+        android:textColor="#FFF"
         android:text="@string/params_strength"/>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -551,5 +557,5 @@
         android:text="@string/design_done" />
 
 
-
-</LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
