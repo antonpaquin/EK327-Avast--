@@ -157,6 +157,7 @@
                 android:layout_height="40dp"
                 android:text="@string/params_minus"/>
             <Button
+                android:id="@+id/params_bluetooth_infectivity_plus"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:text="@string/params_plus"/>
@@ -373,7 +374,6 @@
             android:layout_height="match_parent"
             android:id="@+id/params_robustness_layout">
 
-
             <View
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
@@ -557,8 +557,7 @@
         <!-- Could stick an image here or something-->
     </View>
 
-    <Button
-        android:id="@+id/params_done_button"
+    <Button android:id="@+id/params_done_button"
         android:layout_width="@dimen/home_button_width"
         android:layout_height="@dimen/home_button_height"
         android:text="@string/design_done" />
