@@ -115,6 +115,10 @@ public class ConnectionService extends Service {
         source.startActivity(discoverableIntent);
     }
 
+    public static double getLatitude() {
+        return 0;
+    }
+
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
