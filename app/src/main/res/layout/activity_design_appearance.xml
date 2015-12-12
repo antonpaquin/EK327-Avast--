@@ -88,6 +88,13 @@
             android:layout_height="@dimen/home_button_height"
             android:text="@string/design_add_geometry_button"/>
 
+        <Button
+            android:id="@+id/design_params_button"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Virus Stats"
+            />
+
         <LinearLayout
             android:id="@+id/design_color_slider_menu"
             android:layout_width="match_parent"
