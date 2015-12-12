@@ -1,6 +1,8 @@
 package bilgerat.wizzy.avast.Utils;
 
+import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -57,7 +59,7 @@ public class InfectionModel {
     public void gain_resistances() {
         for (int i=0; i<viruses.size(); i++) {
             Virus v = viruses.get(i);
-            resistance.put(v.ID, resistance.get(v) + resistance_growth);
+            resistance.put(v.ID, resistance.get(v.ID) + resistance_growth);
         }
     }
 
@@ -108,7 +110,7 @@ public class InfectionModel {
     public static Virus parseJSONVirus(String json) {
         try {
             Virus v = new Virus();
-
+            JSONObject j = new JSONObject(json);
             return v;
         }catch (JSONException e) {
             return new Virus();

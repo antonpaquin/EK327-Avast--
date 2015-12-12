@@ -67,7 +67,7 @@ public class InfectionService extends Service {
         model.gain_resistances();
     }
 
-    public void growthEvent(InfectionModel.Virus aggressor) {
+    public static void growthEvent(InfectionModel.Virus aggressor) {
         for (int j=0; j<model.viruses.size(); j++) {
             InfectionModel.Virus victim = model.viruses.get(j);
             double transfer = InfectionModel.attack(aggressor, victim);
@@ -105,7 +105,8 @@ public class InfectionService extends Service {
         HttpApi.getVirus(Integer.toString(virusID), new HttpApi.ResponseHandler() {
             @Override
             public void onSuccess(String response) {
-                InfectionModel.parseJSONVirus(response);
+                InfectionModel.Virus v = InfectionModel.parseJSONVirus(response);
+                InfectionService.growthEvent(v);
             }
 
             @Override
