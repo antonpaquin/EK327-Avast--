@@ -4,6 +4,8 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.annotation.Nullable;
 
+import org.apache.http.client.HttpResponseException;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,6 +23,11 @@ public class HttpApi {
 
     //"returns" actually means calling handler.onSuccess(String) which is automatically done by properly calling httpGet
     //For all intents and purposes the end of the function is httpGet(...);
+
+    public static void getVirus(String virusId, ResponseHandler handler) {
+        //Gets virus stats. Full list can be found in the Virus subclass in InfectionModel
+        //JSON
+    }
 
     public static void getVirusHistoryGraph(String virusId, ResponseHandler handler) {
         //gets the URL of an image that is the history graph of virus infections over time

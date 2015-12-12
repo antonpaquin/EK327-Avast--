@@ -2,8 +2,15 @@ package bilgerat.wizzy.avast.Services;
 
 import android.app.Service;
 import android.content.Intent;
+import android.os.Handler;
 import android.os.IBinder;
+import android.util.Log;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Random;
+
+import bilgerat.wizzy.avast.Utils.HttpApi;
 import bilgerat.wizzy.avast.Utils.InfectionModel;
 
 public class InfectionService extends Service {
@@ -32,21 +39,79 @@ public class InfectionService extends Service {
      */
 
     public static InfectionModel model;
+    private static final int tickInterval = 15;
 
     public InfectionService() {
+        final Handler handler = new Handler();
+        Runnable doTicks = new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    tick();
+                } catch (Exception e) {
+                   e.printStackTrace();
+                } finally {
+                    handler.postDelayed(this, tickInterval*60*1000);
+                }
+            }
+        };
+        handler.post(doTicks);
+    }
+
+    public void tick() {
+        model.purge_low_viruses();
+        ArrayList<InfectionModel.Virus> aggressors = model.get_aggressors();
+        for (int i=0; i<aggressors.size(); i++) {
+            growthEvent(aggressors.get(i));
+        }
+        model.gain_resistances();
+    }
+
+    public void growthEvent(InfectionModel.Virus aggressor) {
+        for (int j=0; j<model.viruses.size(); j++) {
+            InfectionModel.Virus victim = model.viruses.get(j);
+            double transfer = InfectionModel.attack(aggressor, victim);
+            transfer *= 0.05;
+            transfer *= (model.infection.get(victim));
+            transfer = Math.min(model.infection.get(victim), transfer);
+            model.infection.put(aggressor, model.infection.get(aggressor) + transfer);
+            model.infection.put(victim, model.infection.get(victim) - transfer);
+        }
+
     }
 
     @Override
     public IBinder onBind(Intent intent) {
-        // TODO: Return the communication channel to the service.
-        throw new UnsupportedOperationException("Not yet implemented");
+        return null;
     }
 
     public static int[] getTransmission() {
-        return null;//TODO
+        ArrayList<Integer> li = new ArrayList<>();
+        Random r = new Random();
+        for (int i=0; i<model.viruses.size(); i++) {
+            InfectionModel.Virus v = model.viruses.get(i);
+            if (r.nextDouble() % 1 < v.infectivity_near * model.infection.get(v)) {
+                li.add(v.ID);
+            }
+        }
+        int[] res = new int[li.size()];
+        for (int i=0; i<li.size(); i++) {
+            res[i] = li.get(i);
+        }
+        return res;
     }
 
     public static void transmissionEvent(int virusID) {
+        HttpApi.getVirus(Integer.toString(virusID), new HttpApi.ResponseHandler() {
+            @Override
+            public void onSuccess(String response) {
+                InfectionModel.parseJSONVirus(response);
+            }
 
+            @Override
+            public void onFail(String response) {
+                Log.d("Avast: ", response);
+            }
+        });
     }
 }
