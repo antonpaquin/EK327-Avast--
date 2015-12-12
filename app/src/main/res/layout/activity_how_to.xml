@@ -1,9 +1,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent"
+    android:background="@drawable/ebola1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="bilgerat.wizzy.avast.Activities.HowToActivity">
 
     <!--
@@ -17,11 +23,14 @@
         android:textSize="@dimen/title_font_size"
         android:text="How To Play"
         android:gravity="center"
-        android:textColor="#000"/>
+        android:textColor="#FFF"/>
 
     <TextView
         android:layout_below="@+id/how_to_title_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:textColor="#FFF"
         android:text="@string/read_me" />
+    </RelativeLayout>
+
 </RelativeLayout>
