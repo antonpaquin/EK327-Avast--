@@ -24,6 +24,11 @@ public class HttpApi {
     //"returns" actually means calling handler.onSuccess(String) which is automatically done by properly calling httpGet
     //For all intents and purposes the end of the function is httpGet(...);
 
+    public static void getNewId(ResponseHandler handler) {
+        //Return a new unique ID that a virus can use
+        //Straight string
+    }
+
     public static void getVirus(String virusId, ResponseHandler handler) {
         //Gets virus stats. Full list can be found in the Virus subclass in InfectionModel
         //JSON
