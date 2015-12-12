@@ -59,6 +59,7 @@
             android:text="@string/params_plus"/>
 
         <LinearLayout
+            android:id="@+id/params_aggression_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -145,6 +146,7 @@
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/params_bluetooth_infectivity_layout"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:orientation="horizontal">
@@ -155,12 +157,12 @@
                 android:layout_height="40dp"
                 android:text="@string/params_minus"/>
             <Button
-                android:id="@+id/params_bluetooth_infectivity_plus"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:text="@string/params_plus"/>
 
         <LinearLayout
+            android:id="@+id/params_bluetooth_infectivity_plus"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -264,6 +266,7 @@
             android:text="@string/params_plus"/>
 
         <LinearLayout
+            android:id="@+id/params_gps_infectivity_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -367,7 +370,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:id="@+id/params_robustness_layout">
+
 
             <View
                 android:layout_height="match_parent"
@@ -469,7 +474,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:id="@+id/params_strength_layout">
 
             <View
                 android:layout_height="match_parent"
@@ -552,6 +558,7 @@
     </View>
 
     <Button
+        android:id="@+id/params_done_button"
         android:layout_width="@dimen/home_button_width"
         android:layout_height="@dimen/home_button_height"
         android:text="@string/design_done" />

@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.view.View;
+import android.widget.LinearLayout;
+
 import bilgerat.wizzy.avast.R;
 
 public class DesignParamsActivity extends AppCompatActivity {
@@ -130,6 +132,9 @@ public class DesignParamsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (gpsInfection < 10)
                     gpsInfection++;
+
+                LinearLayout l = (LinearLayout) findViewById(R.id.params_bluetooth_infectivity_layout);
+                redraw(gpsInfection, l);
             }
         });
 
@@ -139,9 +144,24 @@ public class DesignParamsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (gpsInfection > 0)
                     gpsInfection--;
+
+                LinearLayout l = (LinearLayout) findViewById(R.id.params_bluetooth_infectivity_layout);
+                redraw(gpsInfection, l);
             }
         });
 
 
+    }
+
+    void redraw(int n, LinearLayout theLayout)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            theLayout.getChildAt(i).setBackgroundColor(0x00FF00);
+        }
+        for (int i = n; i < 10; i++)
+        {
+            theLayout.getChildAt(i).setBackgroundColor(0xBBBBBB);
+        }
     }
 }
