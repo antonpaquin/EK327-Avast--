@@ -8,7 +8,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.view.View;
+import android.widget.EditText;
+
 import bilgerat.wizzy.avast.R;
+import bilgerat.wizzy.avast.Services.InfectionService;
 
 public class DesignParamsActivity extends AppCompatActivity {
     /*
@@ -37,16 +40,19 @@ public class DesignParamsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_design_params);
+        bindButtons();
     }
 
 
     void bindButtons()
     {
-        Button doneButton = (Button) findViewById(R.id.params_done_button);
         final Activity paramsActivity = this;
+        final EditText editText = (EditText) findViewById(R.id.design_params_virus_name);
+        Button doneButton = (Button) findViewById(R.id.params_done_button);
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                InfectionService.doNewBuild(editText.getText().toString(), aggression, strength, climate, bluetoothInfection, gpsInfection);
                 Intent intent = new Intent(paramsActivity, HomeActivity.class);
                 startActivity(intent);
             }
