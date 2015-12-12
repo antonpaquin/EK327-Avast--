@@ -50,6 +50,11 @@ public class DesignParamsActivity extends AppCompatActivity {
     {
         final Activity paramsActivity = this;
         final EditText editText = (EditText) findViewById(R.id.design_params_virus_name);
+        final LinearLayout aggressionLayout = (LinearLayout) findViewById(R.id.params_aggression_layout);
+        final LinearLayout strengthLayout = (LinearLayout) findViewById(R.id.params_strength_layout);
+        final LinearLayout climateLayout = (LinearLayout) findViewById(R.id.params_robustness_layout);
+        final LinearLayout infectNearLayout = (LinearLayout) findViewById(R.id.params_bluetooth_infectivity_layout);
+        final LinearLayout infectFarLayout = (LinearLayout) findViewById(R.id.params_gps_infectivity_layout);
         Button doneButton = (Button) findViewById(R.id.params_done_button);
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +71,7 @@ public class DesignParamsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (aggression < 10)
                     aggression++;
+                redraw(aggression, aggressionLayout);
             }
         });
 
@@ -75,6 +81,7 @@ public class DesignParamsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (aggression > 0)
                     aggression--;
+                redraw(aggression, aggressionLayout);
             }
         });
 
@@ -84,6 +91,7 @@ public class DesignParamsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (strength < 10)
                     strength++;
+                redraw(strength, strengthLayout);
             }
         });
 
@@ -93,6 +101,7 @@ public class DesignParamsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (strength > 0)
                     strength--;
+                redraw(strength, strengthLayout);
             }
         });
 
@@ -102,6 +111,7 @@ public class DesignParamsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (climate < 10)
                     climate++;
+                redraw(climate, climateLayout);
             }
         });
 
@@ -111,6 +121,7 @@ public class DesignParamsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (climate > 0)
                     climate--;
+                redraw(climate, climateLayout);
             }
         });
 
@@ -120,6 +131,7 @@ public class DesignParamsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (bluetoothInfection < 10)
                     bluetoothInfection++;
+                redraw(bluetoothInfection, infectNearLayout);
             }
         });
 
@@ -129,6 +141,7 @@ public class DesignParamsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (bluetoothInfection > 0)
                     bluetoothInfection--;
+                redraw(bluetoothInfection,infectNearLayout);
             }
         });
 
@@ -138,9 +151,7 @@ public class DesignParamsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (gpsInfection < 10)
                     gpsInfection++;
-
-                LinearLayout l = (LinearLayout) findViewById(R.id.params_bluetooth_infectivity_layout);
-                redraw(gpsInfection, l);
+                redraw(gpsInfection, infectFarLayout);
             }
         });
 
@@ -150,24 +161,23 @@ public class DesignParamsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (gpsInfection > 0)
                     gpsInfection--;
-
-                LinearLayout l = (LinearLayout) findViewById(R.id.params_bluetooth_infectivity_layout);
-                redraw(gpsInfection, l);
+                redraw(gpsInfection, infectFarLayout);
             }
         });
 
 
     }
 
-    void redraw(int n, LinearLayout theLayout)
-    {
-        for (int i = 0; i < n; i++)
-        {
-            theLayout.getChildAt(i).setBackgroundColor(0x00FF00);
-        }
-        for (int i = n; i < 10; i++)
-        {
-            theLayout.getChildAt(i).setBackgroundColor(0xBBBBBB);
+    void redraw(int n, LinearLayout theLayout){
+        try {
+            for (int i = 0; i < n; i++) {
+                theLayout.getChildAt(i).setBackgroundColor(0xFF00FF00);
+            }
+            for (int i = n; i < 10; i++) {
+                theLayout.getChildAt(i).setBackgroundColor(0xFFBBBBBB);
+            }
+        }catch (NullPointerException e) {
+            e.printStackTrace();
         }
     }
 }
