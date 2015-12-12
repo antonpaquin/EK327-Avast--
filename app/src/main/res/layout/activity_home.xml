@@ -11,6 +11,7 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:orientation="vertical"
+        android:gravity="center"
     tools:context="bilgerat.wizzy.avast.Activities.HomeActivity">
 
     <!--
@@ -28,8 +29,9 @@
 
     <Button
         android:id="@+id/home_map_button"
+        android:visibility="gone"
         android:layout_width="@dimen/home_button_width"
-        android:layout_height="@dimen/home_button_height"
+        android:layout_height="wrap_content"
         android:text="@string/map"/>
 
     <Button
@@ -41,25 +43,26 @@
     <Button
         android:id="@+id/home_self_view_button"
         android:layout_width="@dimen/home_button_width"
-        android:layout_height="@dimen/home_button_height"
+        android:layout_height="wrap_content"
         android:text="@string/host"/>
 
     <Button
         android:id="@+id/home_design_appearance_button"
         android:layout_width="@dimen/home_button_width"
-        android:layout_height="@dimen/home_button_height"
+        android:layout_height="wrap_content"
         android:text="@string/design"/>
 
     <Button
         android:id="@+id/home_settings_button"
         android:layout_width="@dimen/home_button_width"
-        android:layout_height="@dimen/home_button_height"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
         android:text="@string/settings"/>
 
     <Button
         android:id="@+id/home_quit_button"
         android:layout_width="@dimen/home_button_width"
-        android:layout_height="@dimen/home_button_height"
+        android:layout_height="wrap_content"
         android:text="@string/qqq"/>
 
     </LinearLayout>

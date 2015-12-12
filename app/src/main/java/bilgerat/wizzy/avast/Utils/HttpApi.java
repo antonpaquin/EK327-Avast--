@@ -52,7 +52,7 @@ public class HttpApi {
     public static void getVirusInfected(String virusId, ResponseHandler handler) {
         Map<String, String> params = new HashMap<>();
         params.put("virusId", virusId);
-        httpGet("http://bu.thewillchen.com/getHostInfected.php", params, handler);
+        httpGet("http://bu.thewillchen.com/getVirusInfected.php", params, handler);
         //Gets stats of what the virus has infected -- number, mean % per person
         //JSON
     }
@@ -60,14 +60,15 @@ public class HttpApi {
     public static void getVirusMap(String virusId, ResponseHandler handler) {
         Map<String, String> params = new HashMap<>();
         params.put("virusId", virusId);
-        httpGet("http://bu.thewillchen.com/getHostInfected.php", params, handler);
+        httpGet("http://bu.thewillchen.com/getVirusMap.php", params, handler);
         //Gets the URL of an image which is a map of everyone that has some infection with the virus
         //String
     }
 
     public static void createVirus(String hostId, Map<String,String> params, ResponseHandler handler) {
         params.put("hostId", hostId);
-        httpGet("http://bu.thewillchen.com/getHostInfected.php", params, handler);
+        handler.onSuccess("12");
+        //httpGet("http://bu.thewillchen.com/createVirus.php", params, handler);
         //Returns a virus ID
         //String
         //Also creates the virus in the DB with the given params -- virus design
@@ -75,7 +76,7 @@ public class HttpApi {
 
     public static void getLocalVirus(String hostId, Map<String,String> params, ResponseHandler handler) {
         params.put("hostId", hostId);
-        httpGet("http://bu.thewillchen.com/getHostInfected.php", params, handler);
+        httpGet("http://bu.thewillchen.com/getLocalVirus.php", params, handler);
         //Returns a small random sample (10? 100?) of viruses in the local area as defined by GPS (params)
         //Should be unique responses, but not returning enough is OK
         //JSON
@@ -83,7 +84,7 @@ public class HttpApi {
 
     public static void tellInfected(String hostId, Map<String,String> params, ResponseHandler handler) {
         params.put("hostId", hostId);
-        httpGet("http://bu.thewillchen.com/getHostInfected.php", params, handler);
+        httpGet("http://bu.thewillchen.com/tellInfected.php", params, handler);
         //Tells the server what has infected the host and how much
         //Response should just be a basic Okay
         //String or JSON
