@@ -16,7 +16,71 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:textColor="#000"
+            android:textSize="@dimen/title_font_size"
+            android:gravity="center"
+            android:text="My Statistics"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp" />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:textColor="#000"
+            android:text="Infections over Time"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:textColor="#000"
+                android:text="Number of Infections:"/>
+
+            <TextView
+                android:id="@+id/statistics_infected_number"
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:textColor="#000" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:textColor="#000"
+                android:text="Average Rate of Infection:"/>
+
+            <TextView
+                android:id="@+id/statistics_infected_percent"
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:textColor="#000" />
+
+        </LinearLayout>
+
 
 
 
